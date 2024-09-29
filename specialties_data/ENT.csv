@@ -1,0 +1,132 @@
+Program,Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+Albany Medical Center Program,-,-,-,-,-,-,-,-,Albany,NY,Middle Atlantic
+Allegheny Health Network Medical Education Consortium Program,0.39,0.11,0.32,0.16,0.19,0.12,0.21,0.07,Pittsburgh,PA,Middle Atlantic
+Ascension Macomb-Oakland Hospital Program,0.44,0.05,0.5,0.18,0.06,0.48,0.11,0,Warren,MI,East North Central
+Baylor College of Medicine Program,-,-,-,-,-,-,-,-,Houston,TX,West South Central
+Beth Israel Deaconess Medical Center/Harvard Medical School Program,0.39,0,0.76,0.12,0.18,0,0.07,0,Boston,MA,New England
+Boston University Medical Center Program,0.34,0,0.63,0.18,0.22,0,0.07,0,Boston,MA,New England
+Case Western Reserve University/University Hospitals Cleveland Medical Center Program,0.32,0.01,0.43,0.12,0.15,0,0.08,0.1,Cleveland,OH,East North Central
+Cedars-Sinai Medical Center Program,-,-,-,-,-,-,-,-,Los Angeles,CA,Pacific
+Cleveland Clinic Foundation Program,0.46,0,0.28,0.19,0.22,0,0.08,0,Cleveland,OH,East North Central
+Cooper Medical School of Rowan University/Cooper University Hospital Program,0.43,0.06,0.64,0.12,0.18,0.05,0,0,Camden,NJ,Middle Atlantic
+Corewell Health (Farmington Hills) Program,-,-,-,-,-,-,-,-,Farmington Hills,MI,East North Central
+Dartmouth-Hitchcock/Mary Hitchcock Memorial Hospital Program,0.51,0.02,1,0.11,0.12,0.08,0.08,0.07,Lebanon,NH,New England
+Detroit Medical Center Corporation Program,-,-,-,-,-,-,-,-,Detroit,MI,East North Central
+Duke University Hospital Program,-,-,-,-,-,-,-,-,Durham,NC,South Atlantic
+Eastern Virginia Medical School Program,-,-,-,-,-,-,-,-,Norfolk,VA,South Atlantic
+Emory University School of Medicine Program,-,-,-,-,-,-,-,-,Atlanta,GA,South Atlantic
+Geisinger Health System Program,0.28,0.1,0.12,0.17,0.17,0.2,0,0,Danville,PA,Middle Atlantic
+George Washington University Program,-,-,-,-,-,-,-,-,Washington,DC,South Atlantic
+Henry Ford Health/Henry Ford Hospital Program,0.61,0.03,0.67,0.14,0.19,0.1,0.18,0.09,Detroit,MI,East North Central
+Henry Ford Health/Henry Ford Macomb Hospital Program,-,-,-,-,-,-,-,-,Clinton Township,MI,East North Central
+Icahn School of Medicine at Mount Sinai/New York Eye and Ear Infirmary at Mount Sinai Program,-,-,-,-,-,-,-,-,New York,NY,Middle Atlantic
+Indiana University School of Medicine Program,0.38,0.11,1,0.22,0.26,0,0,0,Indianapolis,IN,East North Central
+Johns Hopkins University Program,0.28,0,0.71,0.14,0.17,0,0.07,0.05,Baltimore,MD,South Atlantic
+Kaiser Permanente Northern California Program,0.49,0,0.55,0.11,0.21,0,0,0,Oakland,CA,Pacific
+Kansas City University GME Consortium (KCU-GME Consortium)/Freeman Program,0.26,0.01,0.75,0.07,0,0.27,0.17,0,Joplin,MO,West North Central
+Kettering Health Network Program,0.41,0.03,0.14,0.18,0,0.48,0,0,Dayton,OH,East North Central
+Kirk Kerkorian School of Medicine at UNLV Program,0.38,0.21,0,0.25,0.29,0,0,0,Las Vegas,NV,Mountain
+Lehigh Valley Health Network Program,0.38,0.03,0.21,0.1,0.13,0.15,0,0,Allentown,PA,Middle Atlantic
+Loma Linda University Health Education Consortium Program,0.45,0.01,0.37,0.11,0.18,0,0,0,Loma Linda,CA,Pacific
+Louisiana State University (Shreveport) Program,0.54,0.26,0.64,0.36,0.49,0,0,0,Shreveport,LA,West South Central
+Louisiana State University School of Medicine Program,-,-,-,-,-,-,-,-,New Orleans,LA,West South Central
+Loyola University Medical Center Program,-,-,-,-,-,-,-,-,Maywood,IL,East North Central
+Madigan Army Medical Center Program,-,-,-,-,-,-,-,-,Tacoma,WA,Pacific
+Mass General Brigham/Massachusetts Eye and Ear Infirmary/Harvard Medical School Program,-,-,-,-,-,-,-,-,Boston,MA,New England
+Mayo Clinic College of Medicine and Science (Jacksonville) Program,0.28,0.32,0.29,0.31,0.37,0,0,0.07,Jacksonville,FL,South Atlantic
+Mayo Clinic College of Medicine and Science (Phoenix) Program,0.33,0.02,0.5,0.12,0.14,0,0,0,Phoenix,AZ,Mountain
+Mayo Clinic College of Medicine and Science (Rochester) Program,0.48,0.03,0.63,0.19,0.23,0,0.09,0.08,Rochester,MN,West North Central
+McGaw Medical Center of Northwestern University Program,-,-,-,-,-,-,-,-,Chicago,IL,East North Central
+McLaren Health Care/Oakland/MSU Program,-,-,-,-,-,-,-,-,Pontiac,MI,East North Central
+Medical College of Georgia Program,0.53,0.02,0.64,0.17,0.21,0.12,0.07,0,Augusta,GA,South Atlantic
+Medical College of Wisconsin Affiliated Hospitals Program,0.48,0,1,0.16,0.22,0,0,0,Milwaukee,WI,East North Central
+Medical University of South Carolina Program,0.3,0.04,0.71,0.16,0.2,0.05,0,0,Charleston,SC,South Atlantic
+MedStar Health/Georgetown University Hospital Program,0.13,0,0.2,0.08,0.09,0,0,0,Washington,DC,South Atlantic
+Methodist Hospital (Houston) Program,-,-,-,-,-,-,-,-,Houston,TX,West South Central
+Montefiore Medical Center/Albert Einstein College of Medicine Program,-,-,-,-,-,-,-,-,Bronx,NY,Middle Atlantic
+National Capital Consortium Program,-,-,-,-,-,-,-,-,Bethesda,MD,South Atlantic
+Naval Medical Center (Portsmouth) Program,-,-,-,-,-,-,-,-,Portsmouth,VA,South Atlantic
+Naval Medical Center (San Diego) Program,-,-,-,-,-,-,-,-,San Diego,CA,Pacific
+New York Presbyterian Hospital (Columbia and Cornell Campus) Program,-,-,-,-,-,-,-,-,New York,NY,Middle Atlantic
+NYU Grossman School of Medicine Program,0.36,0.03,0.36,0.14,0.21,0.07,0,0.07,New York,NY,Middle Atlantic
+Ohio State University Hospital Program,-,-,-,-,-,-,-,-,Columbus,OH,East North Central
+OhioHealth/Doctors Hospital Program,0.26,0,0.25,0.13,0,0.25,0,0,Columbus,OH,East North Central
+Oklahoma State University Center for Health Sciences Program,-,-,-,-,-,-,-,-,Tulsa,OK,West South Central
+Oregon Health & Science University (OHSU Health) Program,0.21,0.03,-,0.11,0.13,0,0,0,Portland,OR,Pacific
+Penn State Milton S Hershey Medical Center Program,0.56,0.01,0.56,0.16,0.23,0,0.07,0,Hershey,PA,Middle Atlantic
+Philadelphia College of Osteopathic Medicine Program,-,-,-,-,-,-,-,-,Philadelphia,PA,Middle Atlantic
+Rush University Medical Center Program,0.3,0,0.5,0.12,0.15,0,0,0.11,Chicago,IL,East North Central
+Rutgers Health/New Jersey Medical School Program,0.37,0.02,0.77,0.16,0.2,0.19,0,0,Newark,NJ,Middle Atlantic
+San Antonio Uniformed Services Health Education Consortium Program,-,-,-,-,-,-,-,-,JBSA-Fort Sam Houston,TX,West South Central
+Sidney Kimmel Medical College at Thomas Jefferson University/TJUH Program,0.3,0.02,0.48,0.15,0.2,0,0,0.08,Philadelphia,PA,Middle Atlantic
+Southern Illinois University Program,-,-,-,-,-,-,-,-,Springfield,IL,East North Central
+SSM Health/Saint Louis University School of Medicine Program,-,-,-,-,-,-,-,-,St Louis,MO,West North Central
+St Elizabeth Boardman Hospital Program,0.46,0.09,0.17,0.23,0.08,0.5,0,0,Boardman,OH,East North Central
+St Luke's Hospital - Anderson Campus Program,0.31,0.27,0.54,0.24,0.35,0.08,0,0,Easton,PA,Middle Atlantic
+Stanford Health Care-Sponsored Stanford University Program,-,-,-,-,-,-,-,-,Palo Alto,CA,Pacific
+Stony Brook Medicine Program,0.48,0.06,0.31,0.1,0.17,0,0.1,0,Stony Brook,NY,Middle Atlantic
+SUNY Downstate Health Sciences University Program,-,-,-,-,-,-,-,-,Brooklyn,NY,Middle Atlantic
+SUNY Upstate Medical University Program,0.51,0.02,0.48,0.14,0.23,0.13,0,0,Syracuse,NY,Middle Atlantic
+Temple University Hospital Program,0.44,0.02,0.31,0.15,0.19,0,0,0,Philadelphia,PA,Middle Atlantic
+Texas A&M College of Medicine-Scott and White Medical Center (Temple) Program,0.44,0.02,0.48,0.06,0.16,0,0,0,Temple,TX,West South Central
+Texas Tech University Health Sciences Center at Lubbock Program,-,-,-,-,-,-,-,-,Lubbock,TX,West South Central
+Tripler Army Medical Center Program,-,-,-,-,-,-,-,-,Tripler AMC,HI,Pacific
+Tufts Medical Center Program,0.35,0.01,0.53,0.13,0.16,0,0,0,Boston,MA,New England
+Tulane University Program,0.4,0,0.69,0.12,0.16,0.08,0.07,0.1,New Orleans,LA,West South Central
+UCLA David Geffen School of Medicine/UCLA Medical Center Program,0.38,0,0.45,0.14,0.21,0,0,0,Los Angeles,CA,Pacific
+UMass Chan Medical School Program,0.49,0.09,0.5,0.17,0.21,0.07,0.18,0,Worcester,MA,New England
+University at Buffalo Program,0.4,0.23,0.42,0.23,0.3,0.13,0,0,Buffalo,NY,Middle Atlantic
+University of Alabama Medical Center Program,0.39,0,0,0.17,0.18,0,0,0.1,Birmingham,AL,East South Central
+University of Arizona College of Medicine-Tucson Program,0.58,0,0.75,0.15,0.18,0,0,0,Tucson,AZ,Mountain
+University of Arkansas for Medical Sciences (UAMS) College of Medicine Program,0.4,0.2,1,0.25,0.32,0,0.08,0.09,Little Rock,AR,West South Central
+University of California (Irvine) Program,0.49,0.02,0.55,0.18,0.26,0,0.11,0,Orange,CA,Pacific
+University of California (San Diego) Medical Center Program,0.42,0.01,0.53,0.17,0.24,0,0.07,0,San Diego,CA,Pacific
+University of California (San Francisco) Program,0.34,0,0.37,0.15,0.21,0,0,0,San Francisco,CA,Pacific
+University of California Davis Health Program,-,-,-,-,-,-,-,-,Sacramento,CA,Pacific
+University of Chicago Program,0.35,0,0.35,0.17,0.19,0,0.08,0.13,Chicago,IL,East North Central
+University of Cincinnati Medical Center/College of Medicine Program,0.39,0,0.44,0.18,0.22,0,0.07,0,Cincinnati,OH,East North Central
+University of Colorado Program,-,-,-,-,-,-,-,-,Aurora,CO,Mountain
+University of Connecticut Program,0.43,0,0.4,0.15,0.16,0.21,0,0,Farmington,CT,New England
+University of Florida Program,-,-,-,-,-,-,-,-,Gainesville,FL,South Atlantic
+University of Illinois College of Medicine at Chicago Program,0.51,0,0.43,0.2,0.23,0.06,0,0.18,Chicago,IL,East North Central
+University of Iowa Hospitals and Clinics Program,0.5,0.04,0,0.26,0.27,0,0.31,0.13,Iowa City,IA,West North Central
+University of Kansas School of Medicine Program,0.32,0.04,0.5,0.13,0.16,0,0,0,Kansas City,KS,West North Central
+University of Kentucky College of Medicine Program,0.43,0,0.83,0.17,0.22,0.07,0,0,Lexington,KY,East South Central
+University of Louisville School of Medicine Program,0.46,0.14,1,0.25,0.3,0,0.1,0.24,Louisville,KY,East South Central
+University of Maryland Program,-,-,-,-,-,-,-,-,Baltimore,MD,South Atlantic
+University of Miami/Jackson Health System Program,0.27,0,0.08,0.14,0.16,0,0.13,0,Miami,FL,South Atlantic
+University of Michigan Program,-,-,-,-,-,-,-,-,Ann Arbor,MI,East North Central
+University of Minnesota Program,-,-,-,-,-,-,-,-,Minneapolis,MN,West North Central
+University of Mississippi Medical Center Program,0.53,0.09,0,0.24,0.3,0,0,0,Jackson,MS,East South Central
+University of Missouri-Columbia Program,-,-,-,-,-,-,-,-,Columbia,MO,West North Central
+University of Nebraska Medical Center College of Medicine Program,-,-,-,-,-,-,-,-,Omaha,NE,West North Central
+University of New Mexico School of Medicine Program,0.61,0.02,0.5,0.16,0.18,0.07,0.25,0,Albuquerque,NM,Mountain
+University of North Carolina Hospitals Program,-,-,-,-,-,-,-,-,Chapel Hill,NC,South Atlantic
+University of Oklahoma Health Sciences Center Program,-,-,-,-,-,-,-,-,Oklahoma City,OK,West South Central
+University of Pennsylvania Health System Program,0.23,0,0.41,0.09,0.14,0,0,0,Philadelphia,PA,Middle Atlantic
+University of Puerto Rico Program,-,-,-,-,-,-,-,-,San Juan,PR,South Atlantic
+University of Rochester Program,0.58,0.21,0.56,0.27,0.36,0.06,0.25,0.08,Rochester,NY,Middle Atlantic
+University of South Florida Morsani Program,0.46,0.05,0.6,0.2,0.27,0,0,0,Tampa,FL,South Atlantic
+University of Southern California/Los Angeles General Medical Center (USC/LA General) Program,-,-,-,-,-,-,-,-,Los Angeles,CA,Pacific
+University of Tennessee Program,0.43,0.05,0.63,0.17,0.21,0.13,0,0.09,Memphis,TN,East South Central
+University of Texas Health Science Center at Houston Program,0.51,0,0.56,0.18,0.26,0,0,0,Houston,TX,West South Central
+University of Texas Health Science Center San Antonio Joe and Teresa Lozano Long School of Medicine Program,-,-,-,-,-,-,-,-,San Antonio,TX,West South Central
+University of Texas Medical Branch Hospitals Program,0.6,0.05,0.63,0.19,0.3,0.09,0.18,0,Galveston,TX,West South Central
+University of Texas Southwestern Medical Center Program,0.36,0,0.39,0.15,0.2,0,0,0,Dallas,TX,West South Central
+University of Utah Health Program,0.44,0.03,-,0.18,0.2,0,0.13,0,Salt Lake City,UT,Mountain
+University of Vermont Medical Center Program,0.54,0.03,0,0.14,0.17,0,0,0,Burlington,VT,New England
+University of Virginia Medical Center Program,0.39,0,0.71,0.15,0.18,0,0.08,0,Charlottesville,VA,South Atlantic
+University of Washington Program,-,-,-,-,-,-,-,-,Seattle,WA,Pacific
+University of Wisconsin Hospitals and Clinics Program,-,-,-,-,-,-,-,-,Madison,WI,East North Central
+UPMC Medical Education (Erie) Program,0.53,0.08,0.23,0.22,0.09,0.58,0,0,Erie,PA,Middle Atlantic
+UPMC Medical Education (Pittsburgh) Program,0.17,0.03,0.38,0.08,0.12,0,0,0.04,Pittsburgh,PA,Middle Atlantic
+Vanderbilt University Medical Center Program,-,-,-,-,-,-,-,-,Nashville,TN,East South Central
+Virginia Commonwealth University Health System Program,0.5,0,0.75,0.18,0.22,0,0,0,Richmond,VA,South Atlantic
+Wake Forest University Baptist Medical Center Program,0.27,0,0.46,0.09,0.12,0.05,0,0,Winston-Salem,NC,South Atlantic
+Washington University/B-JH/SLCH Consortium Program,0.43,0.15,0.83,0.26,0.3,0,0.09,0,St Louis,MO,West North Central
+Wayne State University School of Medicine Program,0.56,0.16,0.78,0.24,0.35,0.04,0,0,Detroit,MI,East North Central
+West Virginia University Program,0.48,0.04,1,0.19,0.23,0.14,0.08,0.04,Morgantown,WV,South Atlantic
+Westchester Medical Center Program,0.35,0.24,0.72,0.17,0.35,0,0.07,0,Vahalla,NY,Middle Atlantic
+Western Reserve Hospital Program,0.29,0.01,0.14,0.09,0,0.27,0,0,Cuyahoga Falls,OH,East North Central
+Yale-New Haven Medical Center Program,0.33,0,0.11,0.13,0.15,0,0,0.06,New Haven,CT,New England
+Zucker School of Medicine at Hofstra/Northwell Program,0.3,0,0.36,0.06,0.15,0,0,0,New Hyde Park,NY,Middle Atlant
