@@ -13,15 +13,15 @@ Residency signals were introduced to help applicants express special interest in
 Each specialty has its own unique dynamics, and this project aims to generate insights across various medical fields.
 
 ## Current Focus Areas
-
-1. **Specialty-Specific Analysis:**
-   - We're starting with Orthopedics, Dermatology, and expanding to other competitive specialties like Internal Medicine, Pediatrics, and Emergency Medicine.
-
+1. **Statistical Breakdown:**
+* Analysis of residency interview odds based on variables such as signal placement, applicant residency (in-state vs. out-of-state), medical degree (MD, DO), and IMG status.
+  
 2. **Monte Carlo Simulations:**
-   - Simulation of interview outcomes based on different signaling strategies, with a specific focus on comparing high-signal programs to random signaling.
+* Simulation of interview outcomes based on different signaling strategies, with a specific focus on comparing optimal signaling to random signaling.
+  
+3. **Geographical Biases**
+* Analysis of interview outcomes based on different states of residence. Which states give in-state students the largest edge?
 
-3. **Statistical Breakdown:**
-   - Analysis of residency interview odds based on variables such as signal placement, applicant residency (in-state vs. out-of-state), medical degree (MD, DO), and IMG status.
 
 ## Repository Structure
 
@@ -31,11 +31,7 @@ Each specialty has its own unique dynamics, and this project aims to generate in
 - **scripts/**
   - Contains the Python scripts for data processing, statistical analysis, and Monte Carlo simulations. Current scripts focus on Dermatology but will be expanded to other fields soon.
 
-## How to Contribute
-
-Each manuscript team will be working on a specific aspect of the data for their respective specialty. The current active manuscripts are:
-
-### Manuscripts in Progress
+## Manuscripts in Progress
 
 1. **Optimal Signaling in Orthopedics**
    - **Authors:** [Name1], [Name2]
@@ -49,7 +45,7 @@ Each manuscript team will be working on a specific aspect of the data for their 
    - **Authors:** [Name1]
    - **Synopsis:** Emergency Medicine's response to signals, examining how program-specific factors affect interview chances for different applicant types.
 
-4. **Geographic Bias in Residency Interviews**
+4. **Geographic Bias in Radiology Residency Interviews**
    - **Authors:** [Name1], [Name2]
    - **Synopsis:** How state residency influences interview opportunities across multiple specialties, analyzing which states confer the greatest advantage to in-state applicants.
 
