@@ -23,7 +23,7 @@ Each specialty has its own unique dynamics, and this project aims to generate in
 * Analysis of interview outcomes based on different states of residence. Which states give in-state students the largest edge?
 
 
-## Repository Structure
+## How to Access and Use the Data
 
 - **specialties_data/**
   - This folder contains the raw data files for different medical specialties.
@@ -36,54 +36,11 @@ Each specialty has its own unique dynamics, and this project aims to generate in
 
 ## Manuscripts in Progress
 
-1. **Optimal Signaling in Orthopedics**
-   - **Authors:** [Name1], [Name2]
-   - **Synopsis:** Analyzing how the distribution of signals affects interview rates for Orthopedic residency programs, focusing on the potential benefits of strategic signaling.
-  
-2. **Dermatology Residency Signal Analysis**
-   - **Authors:** [Name1], [Name2]
-   - **Synopsis:** A statistical evaluation of how Dermatology residency programs respond to signals, with a focus on how in-state vs. out-of-state applicants fare in securing interviews.
-
-3. **Signal Impact in Emergency Medicine**
-   - **Authors:** [Name1]
-   - **Synopsis:** Emergency Medicine's response to signals, examining how program-specific factors affect interview chances for different applicant types.
-
-4. **Geographic Bias in Radiology Residency Interviews**
-   - **Authors:** [Name1], [Name2]
-   - **Synopsis:** How state residency influences interview opportunities across multiple specialties, analyzing which states confer the greatest advantage to in-state applicants.
-
-### Adding New Manuscripts
-
-If you are part of a team working on a new manuscript, please follow this format to add your project to the README:
-- **Title:** 
-- **Authors:** 
-- **Synopsis:** Brief description of the manuscript and the area of focus.
-
-## How to Access and Use the Data
-
-Data files for each specialty are stored in the `specialties_data/` folder. The script folder includes a Python file that loads and processes the CSV files and runs Monte Carlo simulations to evaluate signaling outcomes.
-
-### Example Script
-
-```python
-import pandas as pd
-import random
-
-# Load and clean data
-df = pd.read_csv('specialties_data/dermatology.csv')
-# Process numeric fields and run simulation
-...
-```
-
-The above script is a basic example for Dermatology, showing how to load the data and perform basic simulations. Results will include interview rate distributions and confidence intervals for both gold and silver signals.
+[Insert Links Here]
 
 ## Tools and Resources
 
-We are using **Zotero** for citation management and **SciSpace** for exploring relevant academic papers. Please ensure that all manuscripts are properly cited and that literature reviews are thorough and up-to-date.
-
-### Getting Started with Zotero
-
-If you're new to Zotero, instructions on how to install and use it are available [here](https://www.zotero.org/support/quick_start_guide). For integrating the Zotero Chrome extension and tools like SciSpace for literature management, refer to our [workflow guide](./workflow_guide.md).
+We are using **Zotero** for citation management and **SciSpace/Elicit** for exploring relevant academic papers. Please ensure that all manuscripts are properly cited and that literature reviews are thorough and up-to-date.
 
 ## Contact
 
