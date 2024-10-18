@@ -30,6 +30,9 @@ Each specialty has its own unique dynamics, and this project aims to generate in
   
 - **scripts/**
   - Contains the Python scripts for data processing, statistical analysis, and Monte Carlo simulations. Current scripts focus on Dermatology but will be expanded to other fields soon.
+ 
+- **reports/**
+  - Contains data reports from completed analysis
 
 ## Manuscripts in Progress
 
