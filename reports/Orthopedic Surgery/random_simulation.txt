@@ -1,0 +1,7 @@
+Simulation Results:
+-------------------
+We randomly picked 30 programs from the dataset to signal.
+
+This was repeated 10,000 times to calculate the average number of interviews one should expect if they were a completely average applicant with completely randomly selected signals.
+
+Signal Sum (30): 4.62 (95% CI: 3.34-5.94)

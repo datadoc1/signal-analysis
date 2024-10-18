@@ -1,0 +1,49 @@
+Optimal Signals:
+Gold:
+University of Arkansas for Medical Sciences (UAMS) College of Medicine Program  (1.0)
+University of Kansas School of Medicine Program  (0.9)
+University of Vermont Medical Center Program  (0.89)
+Brown University/Rhode Island Hospital-Lifespan Program  (0.88)
+Louisiana State University School of Medicine Program  (0.88)
+Silver:
+University of Arkansas for Medical Sciences (UAMS) College of Medicine Program (1.0)
+Brown University/Rhode Island Hospital-Lifespan Program (0.78)
+NYU Grossman School of Medicine Program (0.73)
+Lahey Clinic Program (0.72)
+University of Maryland Program (0.71)
+University of Tennessee Medical Center at Knoxville Program (0.68)
+Geisinger Health System Program (0.67)
+University of Texas Health Science Center at Tyler Program (0.63)
+University of Nebraska Medical Center College of Medicine Program (0.59)
+New York Presbyterian Hospital (Columbia Campus) Program (0.58)
+
+Total Gold Sum: 4.55
+Total Silver Sum: 7.09
+
+Overlap:
+University of Arkansas for Medical Sciences (UAMS) College of Medicine Program (1.0, 1.0)
+Brown University/Rhode Island Hospital-Lifespan Program (0.88, 0.78)
+
+Next Best Options:
+Next Best Gold Options:
+Tulane University Program (0.88), Difference: 0.54
+NYU Grossman School of Medicine Program (0.87), Difference: 0.14
+Penn State Milton S Hershey Medical Center Program (0.87), Difference: 0.31999999999999995
+University of Missouri-Kansas City School of Medicine Program (0.87), Difference: 0.6
+University of Louisville School of Medicine Program (0.85), Difference: 0.58
+University of Southern California/Los Angeles General Medical Center (USC/LA General) Program (0.85), Difference: 0.44
+University of Tennessee Medical Center at Knoxville Program (0.83), Difference: 0.1499999999999999
+University of Iowa Hospitals and Clinics Program (0.8), Difference: 0.34
+University of Chicago Program (0.76), Difference: 0.38
+Virginia Commonwealth University Health System Program (0.75), Difference: 0.45
+Next Best Silver Options:
+University of Kansas (Wichita) Program (0.58), Difference: 0.08000000000000007
+University of Kentucky College of Medicine Program (0.57), Difference: 0.16000000000000003
+Penn State Milton S Hershey Medical Center Program (0.55), Difference: 0.31999999999999995
+University of Mississippi Medical Center Program (0.55), Difference: 0.039999999999999925
+Louisiana State University School of Medicine Program (0.54), Difference: 0.33999999999999997
+University of Vermont Medical Center Program (0.54), Difference: 0.35
+Montefiore Medical Center/Albert Einstein College of Medicine Program (0.53), Difference: 0.14
+University of Texas Southwestern Medical Center Program (0.51), Difference: 0.12
+Washington University/B-JH/SLCH Consortium Program (0.51), Difference: 0.05999999999999994
+Dartmouth-Hitchcock/Mary Hitchcock Memorial Hospital Program (0.47), Difference: 0.17000000000000004

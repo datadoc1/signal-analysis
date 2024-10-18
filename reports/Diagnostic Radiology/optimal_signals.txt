@@ -1,0 +1,45 @@
+Optimal Signals:
+Gold:
+University of Chicago Program  (0.97)
+University of Vermont Medical Center Program  (0.97)
+Integris Health Program  (0.88)
+University of North Carolina Hospitals Program  (0.86)
+West Virginia University Program  (0.86)
+Corewell Health - Grand Rapids/Michigan State University Program  (0.84)
+Silver:
+University of Vermont Medical Center Program (0.85)
+Medical University of South Carolina Program (0.81)
+UMass Chan Medical School Program (0.79)
+Virginia Commonwealth University Health System Program (0.73)
+Loma Linda University Health Education Consortium Program (0.72)
+University of Rochester Program (0.72)
+
+Total Gold Sum: 5.38
+Total Silver Sum: 4.62
+
+Overlap:
+University of Vermont Medical Center Program (0.97, 0.85)
+
+Next Best Options:
+Next Best Gold Options:
+University of Arizona College of Medicine-Tucson Program (0.84), Difference: 0.43
+University of Louisville School of Medicine Program (0.84), Difference: 0.15999999999999992
+Louisiana State University School of Medicine Program (0.82), Difference: 0.25
+Loma Linda University Health Education Consortium Program (0.8), Difference: 0.08000000000000007
+Medical College of Wisconsin Affiliated Hospitals Program (0.8), Difference: 0.21000000000000008
+Medical University of South Carolina Program (0.8), Difference: -0.010000000000000009
+University of Wisconsin Hospitals and Clinics Program (0.8), Difference: 0.35000000000000003
+Temple University Hospital Program (0.79), Difference: 0.68
+Baylor College of Medicine Program (0.78), Difference: 0.49000000000000005
+Mayo Clinic College of Medicine and Science (Rochester) Program (0.78), Difference: 0.17000000000000004
+Next Best Silver Options:
+Kaiser Permanente Southern California (Los Angeles) Program (0.71), Difference: -0.20999999999999996
+UPMC Medical Education Program (0.7), Difference: -0.05999999999999994
+University of Kentucky College of Medicine Program (0.69), Difference: 0.030000000000000027
+University of Missouri-Kansas City School of Medicine Program (0.69), Difference: -0.05999999999999994
+MedStar Health/Georgetown University Hospital Program (0.68), Difference: 0.05999999999999994
+Richmond University Medical Center Program (0.68), Difference: 0.04999999999999993
+University of Louisville School of Medicine Program (0.68), Difference: 0.15999999999999992
+University of Tennessee Medical Center at Knoxville Program (0.68), Difference: 0.06999999999999995
+Mount Auburn Hospital Program (0.67), Difference: 0.010000000000000009
+Cooper Medical School of Rowan University/Cooper University Hospital Program (0.66), Difference: 0.05999999999999994

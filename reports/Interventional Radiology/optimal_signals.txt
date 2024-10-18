@@ -1,0 +1,46 @@
+Optimal Signals:
+Gold:
+Indiana University School of Medicine Program  (1.0)
+Strong Memorial Hospital of the University of Rochester Program  (1.0)
+University of Mississippi School of Medicine Program  (1.0)
+Virginia Commonwealth University Health System Program  (1.0)
+University of North Carolina Hospitals Program  (0.95)
+Corewell Health - Grand Rapids/Michigan State University Program  (0.92)
+Silver:
+Virginia Commonwealth University Health System Program (1.0)
+University of Southern California/Los Angeles General Medical Center (USC/LA General) Program (0.88)
+Henry Ford Health/Henry Ford Hospital Program (0.86)
+University of Wisconsin Hospitals and Clinics Program (0.86)
+University of Kansas School of Medicine Program (0.8)
+Indiana University School of Medicine Program (0.78)
+
+Total Gold Sum: 5.87
+Total Silver Sum: 5.18
+
+Overlap:
+Indiana University School of Medicine Program (1.0, 0.78)
+Virginia Commonwealth University Health System Program (1.0, 1.0)
+
+Next Best Options:
+Next Best Gold Options:
+MaineHealth Program (0.89), Difference: 0.21999999999999997
+University of Alabama Hospital Program (0.88), Difference: 0.38
+University of Kansas School of Medicine Program (0.88), Difference: 0.07999999999999996
+University of Wisconsin Hospitals and Clinics Program (0.88), Difference: 0.020000000000000018
+Louisiana State University School of Medicine Program (0.86), Difference: 0.36
+University of Arizona College of Medicine-Tucson Program (0.83), Difference: 0.42999999999999994
+Sidney Kimmel Medical College at Thomas Jefferson University/TJUH Program (0.82), Difference: 0.13
+Dartmouth-Hitchcock/Mary Hitchcock Memorial Hospital Program (0.81), Difference: 0.48000000000000004
+Medical College of Wisconsin Affiliated Hospitals Program (0.81), Difference: 0.14
+MedStar Health/Georgetown University Hospital Program (0.81), Difference: 0.19000000000000006
+Next Best Silver Options:
+UPMC Medical Education Program (0.78), Difference: -0.10999999999999999
+Vanderbilt University Medical Center Program (0.73), Difference: 0.050000000000000044
+Case Western Reserve University/University Hospitals Cleveland Medical Center Program (0.71), Difference: -0.35
+University of Utah Health Program (0.7), Difference: 0.030000000000000027
+Sidney Kimmel Medical College at Thomas Jefferson University/TJUH Program (0.69), Difference: 0.13
+Johns Hopkins University School of Medicine Program (0.67), Difference: 0.039999999999999925
+MaineHealth Program (0.67), Difference: 0.21999999999999997
+Mayo Clinic College of Medicine and Science (Rochester) Program (0.67), Difference: -0.42000000000000004
+Medical College of Wisconsin Affiliated Hospitals Program (0.67), Difference: 0.14
+Temple University Hospital Program (0.67), Difference: 0.0

@@ -1,0 +1,62 @@
+Optimal Signals:
+Gold:
+Carilion Clinic-Virginia Tech Carilion School of Medicine Program  (1.0)
+Virginia Commonwealth University Health System Program  (1.0)
+University of Illinois College of Medicine at Chicago Program  (0.95)
+Silver:
+St Luke's Hospital - Anderson Campus Program (0.49)
+University of Iowa Hospitals and Clinics Program (0.48)
+Kaiser Permanente Southern California (Los Angeles) Program (0.34)
+Marshfield Clinic Program (0.34)
+The MetroHealth System/Case Western Reserve University Program (0.29)
+Southern Illinois University Program (0.26)
+Temple University Hospital Program (0.25)
+University of Missouri-Columbia Program (0.25)
+University of Wisconsin Hospitals and Clinics Program (0.24)
+Yale-New Haven Medical Center Program (0.24)
+SSM Health/Saint Louis University School of Medicine Program (0.23)
+University of Kansas School of Medicine Program (0.23)
+University of Tennessee Program (0.23)
+University of Arkansas for Medical Sciences (UAMS) College of Medicine Program (0.22)
+Virginia Commonwealth University Health System Program (0.22)
+Mayo Clinic College of Medicine and Science (Rochester) Program (0.21)
+Medical College of Wisconsin Affiliated Hospitals Program (0.2)
+Still OPTI Program (0.2)
+UPMC Medical Education Program (0.2)
+University of Illinois College of Medicine at Chicago Program (0.19)
+University of Nebraska Medical Center College of Medicine Program (0.19)
+University of Texas Southwestern Medical Center Program (0.19)
+Broward Health Program (0.18)
+McGaw Medical Center of Northwestern University Program (0.18)
+Tulane University Program (0.18)
+
+Total Gold Sum: 2.95
+Total Silver Sum: 6.2299999999999995
+
+Overlap:
+Virginia Commonwealth University Health System Program (1.0, 0.22)
+University of Illinois College of Medicine at Chicago Program (0.95, 0.19)
+
+Next Best Options:
+Next Best Gold Options:
+Kaiser Permanente Southern California (Los Angeles) Program (0.89), Difference: 0.55
+Geisinger Health System Program (0.86), Difference: 0.73
+Temple University Hospital Program (0.86), Difference: 0.61
+West Virginia University Program (0.86), Difference: 0.74
+UPMC Medical Education Program (0.85), Difference: 0.6499999999999999
+Baylor University Medical Center Program (0.83), Difference: 0.7899999999999999
+University of New Mexico School of Medicine Program (0.83), Difference: 0.69
+University of Wisconsin Hospitals and Clinics Program (0.83), Difference: 0.59
+Still OPTI Program (0.82), Difference: 0.6199999999999999
+University of Oklahoma Health Sciences Center Program (0.82), Difference: 0.7
+Next Best Silver Options:
+University of Arizona College of Medicine-Tucson Program (0.18), Difference: 0.47000000000000003
+University of California (San Francisco) Program (0.18), Difference: 0.10000000000000003
+University of Cincinnati Medical Center/College of Medicine Program (0.18), Difference: 0.49000000000000005
+Carilion Clinic-Virginia Tech Carilion School of Medicine Program (0.17), Difference: 0.83
+Dartmouth-Hitchcock/Mary Hitchcock Memorial Hospital Program (0.17), Difference: 0.5299999999999999
+Los Angeles County-Harbor-UCLA Medical Center Program (0.17), Difference: 0.45999999999999996
+Oregon Health & Science University (OHSU Health) Program (0.17), Difference: 0.28
+University of Alabama Medical Center Program (0.17), Difference: 0.12999999999999998
+University of Minnesota Program (0.17), Difference: 0.24999999999999997
+University of Vermont Medical Center Program (0.17), Difference: 0.07999999999999999

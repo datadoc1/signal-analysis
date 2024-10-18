@@ -1,0 +1,9 @@
+Optimal Signals:
+Top Candidates:
+Ochsner Clinic Foundation Program (1.0)
+University of Michigan Program (0.97)
+University of Vermont Medical Center Program (0.9)
+Oregon Health & Science University (OHSU Health) Program (0.88)
+Phoenix Children's Hospital Program (0.88)
+
+Total Interviews: 4.63

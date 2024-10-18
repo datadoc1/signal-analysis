@@ -1,14 +1,15 @@
 ﻿Specialty,Tiered,Total Number of Signals,Gold,Silver
 Anesthesiology,Yes,15,5,10
-Child Neurology & Neurodevelopmental Disabilities,No,3,,
+Child Neurology,No,3,,
 Dermatology,Yes,28,3,25
-Diagnostic Radiology and Interventional Radiology,Yes,12,6,6
+Diagnostic Radiology,Yes,12,6,6
 Emergency Medicine,No,7,,
 Family Medicine,No,5,,
 General Surgery,No,5,,
 Internal Medicine,No,7,,
 Internal Medicine/Psychiatry,No,2,,
 Neurological Surgery,No,25,,
+Interventional Radiology,Yes,12,6,6
 Neurology,No,3,,
 Obstetrics and Gynecology,No,18,3,15
 Orthopedic Surgery,No,30,,
