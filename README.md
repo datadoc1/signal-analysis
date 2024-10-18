@@ -28,11 +28,31 @@ Each specialty has its own unique dynamics, and this project aims to generate in
 - **specialties_data/**
   - This folder contains the raw data files for different medical specialties.
   
-- **scripts/**
-  - Contains the Python scripts for data processing, statistical analysis, and Monte Carlo simulations. Current scripts focus on Dermatology but will be expanded to other fields soon.
- 
 - **reports/**
   - Contains data reports from completed analysis
+
+### Interpreting the Reports
+- **descriptive_stats.csv**
+  - 'Count' represents the number of programs that reported data on that column of data
+  - 'Mean' represents the odds of getting an interview at the average program
+  - 'Min' and 'Max' represent the interview odds of the programs with the lowest and highest interview odds
+  - '25%', '50%', '75%' represent percentiles. The median program has an interview rate represented by '50%'
+  - All of these rows are stratified by the columns
+
+- **geographic_bias.csv**
+  - *For the purposes of this data, being "in-state" means going to a medical school in that state, someone born in TX who goes to Yale is a CT resident, not a TX resident*
+  - 'In-State School Mean' represents the mean interview odds for in-state students for programs in each state. 0.42 for AL means that an AL resident has 42% odds of landing an interview at the average AL medical school.
+  - 'In-State School Sum' represents the total interviews an in-state student should expect to get if they apply to every school in their state. 0.83 for AL means that an AL resident should expect 0.83 interviews if they apply to every program in AL.
+  - 'Out-Of-State School Mean' represents the mean interview odds for out-of-state students for programs in each state. 0.05 for AL means that a non-AL resident has 5% odds of landing an interview at the average AL medical school
+  - 'Out-Of-State School' represents the total interviews an out-of-state student should expect to get if they apply to every school in that state. 0.1 for AL means that a non-AL resident should expect 0.1 interviews if they apply to every program in AL.
+  - 'Mean Difference' represents the difference between In-State and Out-Of-State mean. Higher values indicate higher preference for in-state students.
+  - 'Sum Difference' represents the difference between In-State and Out-Of-State sum. A value of 0.73 for AL indicates that if we took two otherwise identical applicants, one from a medical school in AL and one from a non-AL medical school and had them apply to every medical school in AL, we should expect the student at the AL medical school to get 0.73 more interviews.
+ 
+- **optimal_signals.txt**
+  - This file represents the optimal signals including programs and interview likelihood along with total interviews expected if a completely average applicant signalled at these schools.
+
+- **random_simulation.txt**
+  - This file represents the number of interviews one could expect to recieve if they randomly chose signals. A 95% CI is included.
 
 ## Manuscripts in Progress
 
