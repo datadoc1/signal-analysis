@@ -56,7 +56,7 @@ Each specialty has its own unique dynamics, and this project aims to generate in
 
 ## Manuscripts in Progress
 
-[Quantifying the Impact of ERAS Signals and State Residency on Radiology Interview Rates](https://docs.google.com/document/d/1dtocSvL4ES1k8dKN3zMrgUB0OsSqpPiwgt2l1gGgpIs/edit?tab=t.0)
+[Strategic Application in the Era of ERAS Signals Optimizing Interview Opportunities in Radiology Residency Programs](https://docs.google.com/document/d/1dtocSvL4ES1k8dKN3zMrgUB0OsSqpPiwgt2l1gGgpIs/edit?tab=t.0)
 
 ## Tools and Resources
 
