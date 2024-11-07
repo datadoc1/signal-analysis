@@ -56,11 +56,11 @@ Each specialty has its own unique dynamics, and this project aims to generate in
 
 ## Manuscripts in Progress
 
-[Insert Links Here]
+[Quantifying the Impact of ERAS Signals and State Residency on Radiology Interview Rates](https://docs.google.com/document/d/1dtocSvL4ES1k8dKN3zMrgUB0OsSqpPiwgt2l1gGgpIs/edit?tab=t.0)
 
 ## Tools and Resources
 
-We are using **Zotero** for citation management and **SciSpace/Elicit** for exploring relevant academic papers. Please ensure that all manuscripts are properly cited and that literature reviews are thorough and up-to-date.
+We are using [Zotero](https://www.zotero.org/groups/5692550/eras-signals/library) for citation management and **SciSpace/Elicit** for exploring relevant academic papers. Please ensure that all manuscripts are properly cited and that literature reviews are thorough and up-to-date.
 
 ## Contact
 
