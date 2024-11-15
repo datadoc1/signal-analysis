@@ -8,6 +8,7 @@ import numpy as np
 from scipy import stats
 import geopandas as gpd
 import matplotlib.pyplot as plt
+import re
 
 def simulation_tiered(df, gold_count, silver_count):
     # Set the random seed
@@ -253,18 +254,23 @@ def generate_stacked_boxplot(df, column_names, output_file='stacked_boxplot.png'
     pio.write_image(fig, output_file)
     return
 
-
 # Read the specialties file
 specialties = pd.read_csv('signal_2024_match.csv')
 
 # Filter specialties that are tiered
 specialties_tiered = specialties[specialties['Tiered'] == 'Yes']
 specialties_not_tiered = specialties[specialties['Tiered'] == 'No']
-
+'''
 # Iterate over the tiered specialties
 for index, row in specialties_tiered.iterrows():
     value = row["Specialty"]
     df = pd.read_csv(f'data/{value}.csv')
+
+    # Retrieve the values from columns 4 and 5 (gold_count and silver_count)
+    gold_count = int(row.iloc[3])  # Column 4: Gold Count
+    print(gold_count)
+    silver_count = int(row.iloc[4])  # Column 5: Silver Count
+    print(silver_count)
     
     # Convert relevant columns to numeric
     numeric_fields = ['Gold Signal', 'Silver Signal', 'No Signal', 'In-State School', 'Out-Of-State School', 'MD', 'DO', 'US IMG', 'Non US IMG']
@@ -339,18 +345,24 @@ for index, row in specialties_tiered.iterrows():
     clean_data = clean_data[clean_data['Gold Signal'].apply(lambda x: isinstance(x, (int, float)))]
     clean_data = clean_data[clean_data['Silver Signal'].apply(lambda x: isinstance(x, (int, float)))]
     
-    # Calculate coefficients and r-squared only on clean data
-    coefficients = np.polyfit(clean_data['Gold Signal'], clean_data['Silver Signal'], 1)
-    polynomial = np.poly1d(coefficients)
-    r_squared = np.corrcoef(clean_data['Gold Signal'], clean_data['Silver Signal'])[0,1]**2
+    # Add a diagonal line with slope = 1
+    max_val = max(df['Gold Signal'].max(), df['Silver Signal'].max())
+    min_val = min(df['Gold Signal'].min(), df['Silver Signal'].min())
+    diagonal = np.linspace(min_val, max_val, 100)
 
-    # Add trendline
-    x_range = np.linspace(df['Gold Signal'].min(), df['Gold Signal'].max(), 100)
+    # Update scatterplot to flip axes
+    scatterplot.update_traces(x=df['Silver Signal'], y=df['Gold Signal'])
+    scatterplot.update_layout(
+        xaxis_title='Silver Signal',
+        yaxis_title='Gold Signal'
+    )
+
+    # Add diagonal line
     scatterplot.add_trace(go.Scatter(
-        x=x_range,
-        y=polynomial(x_range),
+        x=diagonal,
+        y=diagonal,
         mode='lines',
-        name=f'Trendline (R² = {r_squared:.3f})',
+        name='Equal Signals',
         line=dict(color='red', dash='dash')
     ))
 
@@ -368,9 +380,7 @@ for index, row in specialties_tiered.iterrows():
     top_gold_df.to_csv(os.path.join(output_folder, 'top_gold.csv'), index=False)
     top_silver_df.to_csv(os.path.join(output_folder, 'top_silver.csv'), index=False)
     
-    # Retrieve the values from columns 4 and 5 (gold_count and silver_count)
-    gold_count = int(row.iloc[3])  # Column 4: Gold Count
-    silver_count = int(row.iloc[4])  # Column 5: Silver Count
+    
 
     # Call simulation_tiered with the current df, gold_count, and silver_count
     with open(os.path.join(output_folder, 'random_simulation.txt'), 'w') as file:
@@ -391,43 +401,21 @@ for index, row in specialties_tiered.iterrows():
     # Merge the geographic_bias_df with the shapefile GeoDataFrame
     merged = gdf.set_index('STUSPS').join(geographic_bias_df.set_index('State'))
 
-    # Fill NaN values with 0
-    merged['Mean Difference'] = merged['Mean Difference'].fillna(0)
-    merged['Sum Difference'] = merged['Sum Difference'].fillna(0)
-
-    # Create a function to plot the map with insets
-    def plot_with_insets(data, column, title, output_path):
+    # Create a function to plot the map 
+    def plot_map(data, column, title, output_path):
         fig = plt.figure(figsize=(15, 10))
         
         # Main map
         ax = fig.add_axes([0, 0, 1, 1])
         continental = data[~data.index.isin(['AK', 'HI', 'PR'])]
-        continental.plot(column=column, cmap='Blues', linewidth=0.8, 
-                        edgecolor='0.8', legend=True, ax=ax)
-        
-        # Alaska inset - made larger
-        ax_ak = fig.add_axes([0.02, 0.02, 0.3, 0.3])
-        alaska = data[data.index == 'AK']
-        alaska.plot(column=column, cmap='Blues', linewidth=0.8, 
-                   edgecolor='0.8', ax=ax_ak)
-        ax_ak.set_title('Alaska')
-        ax_ak.axis('off')
-        
-        # Hawaii inset
-        ax_hi = fig.add_axes([0.35, 0.05, 0.2, 0.2])
-        hawaii = data[data.index == 'HI']
-        hawaii.plot(column=column, cmap='Blues', linewidth=0.8, 
-                   edgecolor='0.8', ax=ax_hi)
-        ax_hi.set_title('Hawaii')
-        ax_hi.axis('off')
 
-        # Puerto Rico inset
-        ax_pr = fig.add_axes([0.60, 0.05, 0.2, 0.2])
-        puerto_rico = data[data.index == 'PR']
-        puerto_rico.plot(column=column, cmap='Blues', linewidth=0.8,
-                        edgecolor='0.8', ax=ax_pr)
-        ax_pr.set_title('Puerto Rico')
-        ax_pr.axis('off')
+        # Create a custom colormap with gray for NaN values
+        cmap = plt.cm.Blues
+        cmap.set_bad(color='gray')
+        
+        continental.plot(column=column, cmap=cmap, linewidth=0.8, 
+                        edgecolor='0.8', legend=True, ax=ax,
+                        missing_kwds={'color': 'gray', 'label': 'No Data'})
         
         # Main map settings
         ax.set_title(title, fontdict={'fontsize': '15', 'fontweight': '3'})
@@ -437,18 +425,19 @@ for index, row in specialties_tiered.iterrows():
         plt.close()
 
     # Plot both maps
-    plot_with_insets(merged, 'Mean Difference',
-                     'Geographic Bias Heatmap: Average Increase in Interview Odds for Attending an In-State Medical School',
-                     os.path.join(output_folder, 'geographic_bias_heatmap_average.png'))
+    plot_map(merged, 'Mean Difference',
+             'Geographic Bias Heatmap: Average Increase in Interview Odds for Attending an In-State Medical School',
+             os.path.join(output_folder, 'geographic_bias_heatmap_average.png'))
     
-    plot_with_insets(merged, 'Sum Difference',
-                     'Geographic Bias Heatmap: Total Increase in Expected Interviews for Attending an In-State Medical School',
-                     os.path.join(output_folder, 'geographic_bias_heatmap_total.png'))
-    
-    
+    plot_map(merged, 'Sum Difference',
+             'Geographic Bias Heatmap: Total Increase in Expected Interviews for Attending an In-State Medical School',
+             os.path.join(output_folder, 'geographic_bias_heatmap_total.png'))
+'''    
 
 for index, row in specialties_not_tiered.iterrows():
     value = row["Specialty"]
+    output_folder = f'reports/{value}'
+    os.makedirs(output_folder, exist_ok=True)
     try:
         df = pd.read_csv(f'data/{value}.csv')
     except:
@@ -458,6 +447,12 @@ for index, row in specialties_not_tiered.iterrows():
     numeric_fields = ['Signal', 'No Signal', 'In-State School', 'Out-Of-State School', 'MD', 'DO', 'US IMG', 'Non US IMG']
     existing_numeric_fields = [field for field in numeric_fields if field in df.columns]
     df[existing_numeric_fields] = df[existing_numeric_fields].apply(pd.to_numeric, errors='coerce')
+    
+    if 'Signal' not in df.columns:
+        continue
+    
+    # Generate a stacked boxplot for the numeric fields
+    generate_stacked_boxplot(df, numeric_fields, os.path.join(output_folder, 'stacked_boxplot.png'))
 
     print(value)
     # Create a folder in reports named "value"
@@ -484,7 +479,98 @@ for index, row in specialties_not_tiered.iterrows():
         with open(os.path.join(output_folder, 'optimal_signals.txt'), 'w') as file:
             file.write(optimal(df, signal_count))
     
+    if 'Signal' in df.columns:
+        # Read in optimal simulation results
+        with open(os.path.join(output_folder, 'optimal_signals.txt'), 'r') as file:
+            optimal_lines = file.readlines()
+            optimal_interview_count = float(optimal_lines[-1].split(': ')[1])
+
+        # Read in random simulation results
+        with open(os.path.join(output_folder, 'random_simulation.txt'), 'r') as file:
+            random_lines = file.readlines()
+            last_line = random_lines[-1]
+            
+            # Use regular expression to extract the three float values
+            match = re.search(r'Signal Sum \(\d+\): (\d+\.\d+) \(95% CI: (\d+\.\d+)-(\d+\.\d+)\)', last_line)
+            if match:
+                random_interview_count = float(match.group(1))
+                random_interview_lower = float(match.group(2))
+                random_interview_upper = float(match.group(3))
+            else:
+                raise ValueError("Could not find valid float numbers in the string")
+
+        # Create bar chart
+        fig = go.Figure()
+
+        # Add random signals bar with error bars
+        fig.add_trace(go.Bar(
+            x=['Random Signals'],
+            y=[random_interview_count],
+            error_y=dict(
+                type='data',
+                symmetric=False,
+                array=[random_interview_upper - random_interview_count],
+                arrayminus=[random_interview_count - random_interview_lower]
+            ),
+            name='Random Signals'
+        ))
+
+        # Add optimal signals bar
+        fig.add_trace(go.Bar(
+            x=['Optimal Signals'],
+            y=[optimal_interview_count],
+            name='Optimal Signals'
+        ))
+
+        fig.update_layout(
+            showlegend=False,
+            yaxis_title='Expected Interviews'
+        )
+
+        fig.write_image(os.path.join(output_folder, 'bar.png'))
+    
     geographic_bias_df = geographic_bias(df)
     geographic_bias_df.to_csv(os.path.join(output_folder, 'geographic_bias.csv'), index=False)
+
+    ## Generate Heatmaps
+    # Load the shapefile
+    shapefile_path = 'shapefiles/cb_2021_us_state_20m.shp'
+    gdf = gpd.read_file(shapefile_path)
+
+    # Merge the geographic_bias_df with the shapefile GeoDataFrame
+    merged = gdf.set_index('STUSPS').join(geographic_bias_df.set_index('State'))
+
+    # Create a function to plot the map 
+    def plot_map(data, column, title, output_path):
+        fig = plt.figure(figsize=(15, 10))
+        
+        # Main map
+        ax = fig.add_axes([0, 0, 1, 1])
+        continental = data[~data.index.isin(['AK', 'HI', 'PR'])]
+
+        # Create a custom colormap with gray for NaN values
+        cmap = plt.cm.Blues
+        cmap.set_bad(color='gray')
+        
+        continental.plot(column=column, cmap=cmap, linewidth=0.8, 
+                        edgecolor='0.8', legend=True, ax=ax,
+                        missing_kwds={'color': 'gray', 'label': 'No Data'})
+        
+        # Main map settings
+        ax.set_title(title, fontdict={'fontsize': '15', 'fontweight': '3'})
+        ax.axis('off')
+        
+        plt.savefig(output_path, dpi=300, bbox_inches='tight')
+        plt.close()
+
+    # Plot both maps
+    plot_map(merged, 'Mean Difference',
+             'Geographic Bias Heatmap: Average Increase in Interview Odds for Attending an In-State Medical School',
+             os.path.join(output_folder, 'geographic_bias_heatmap_average.png'))
+    
+    plot_map(merged, 'Sum Difference',
+             'Geographic Bias Heatmap: Total Increase in Expected Interviews for Attending an In-State Medical School',
+             os.path.join(output_folder, 'geographic_bias_heatmap_total.png'))
+
 
 

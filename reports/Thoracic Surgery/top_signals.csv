@@ -1,0 +1,11 @@
+Program,Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+University of Iowa Hospitals and Clinics Program,0.75,0.18,1.0,0.2,0.32,0.0,0.0,0.04,Iowa City,IA,West North Central
+New York Presbyterian Hospital (Columbia Campus) Program,0.39,0.16,0.75,0.18,0.33,0.0,0.05,0.03,New York,NY,Middle Atlantic
+McGaw Medical Center of Northwestern University Program,0.38,0.21,0.75,0.22,0.37,0.0,0.0,0.05,Chicago,IL,East North Central
+University of Kentucky College of Medicine Program,0.33,0.19,0.0,0.21,0.31,0.13,0.06,0.07,Lexington,KY,East South Central
+NYU Grossman School of Medicine Program,0.28,0.11,0.38,0.12,0.22,0.0,0.0,0.0,New York,NY,Middle Atlantic
+Duke University Hospital Program,0.26,0.19,,0.21,0.33,0.0,0.0,0.03,Durham,NC,South Atlantic
+University of Rochester Program,0.25,0.27,1.0,0.24,0.47,0.0,0.0,0.0,Rochester,NY,Middle Atlantic
+Yale-New Haven Medical Center Program,0.24,0.3,0.5,0.28,0.48,0.0,0.0,0.11,New Haven,CT,New England
+Zucker School of Medicine at Hofstra/Northwell Program,0.24,0.27,0.78,0.23,0.44,0.2,0.05,0.03,New Hyde Park,NY,Middle Atlanti
+Baylor College of Medicine Program,0.23,0.28,0.75,0.26,0.46,0.0,0.0,0.03,Houston,TX,West South Central

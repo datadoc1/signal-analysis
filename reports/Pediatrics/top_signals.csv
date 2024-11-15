@@ -1,0 +1,11 @@
+Program,Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+Ochsner Clinic Foundation Program,1.0,0.23,1.0,0.28,0.47,0.28,0.25,0.29,New Orleans,LA,West South Central
+University of Michigan Program,0.97,0.23,0.86,0.3,0.5,0.21,0.02,0.03,Ann Arbor,MI,East North Central
+University of Vermont Medical Center Program,0.9,0.27,1.0,0.29,0.58,0.29,0.02,0.05,Burlington,VT,New England
+Oregon Health & Science University (OHSU Health) Program,0.88,0.24,1.0,0.32,0.51,0.26,0.05,0.01,Portland,OR,Pacific
+Phoenix Children's Hospital Program,0.88,0.28,0.98,0.35,0.6,0.39,0.07,0.0,Phoenix,AZ,Mountain
+Central Iowa Health System (Iowa Methodist Medical Center) Program,0.85,0.17,1.0,0.19,0.42,0.43,0.08,0.02,Des Moines,IA,West North Central
+Medical College of Georgia Program,0.85,0.44,0.9,0.44,0.75,0.77,0.12,0.05,Augusta,GA,South Atlantic
+"Osteopathic Medical Education Consortium of Oklahoma, Inc. (OMECO) Program",0.85,0.24,1.0,0.27,0.0,0.39,0.0,0.0,Tulsa,OK,West South Central
+Carolinas Medical Center Program,0.84,0.27,0.78,0.33,0.55,0.16,0.03,0.01,Charlotte,NC,South Atlantic
+University of Missouri-Columbia Program,0.84,0.22,0.96,0.2,0.85,0.59,0.01,0.0,Columbia,MO,West North Central

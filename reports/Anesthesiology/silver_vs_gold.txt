@@ -1,0 +1,12 @@
+Programs with equal Gold and Silver signals: 4
+Programs with Gold signal less than Silver signal: 10
+R-squared value: 0.284
+P-value: 0.000000
+Correlation: 0.533
+
+Programs where Gold Signal < No Signal:
+Count: 0
+
+Programs where Silver Signal < No Signal:
+Count: 1
+HCA Healthcare/Los Robles Regional Medical Center Program: Silver=0.13, No=0.19

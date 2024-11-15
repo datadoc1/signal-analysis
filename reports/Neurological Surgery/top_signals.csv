@@ -1,0 +1,11 @@
+Program,Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+Corewell Health William Beaumont University Hospital (Dearborn) Program,0.72,0.08,0.9,0.15,0.28,0.12,0.0,0.0,Royal Oak,MI,East North Central
+Carilion Clinic-Virginia Tech Carilion School of Medicine Program,0.59,0.06,0.7,0.16,0.19,0.38,0.06,0.09,Roanoke,VA,South Atlantic
+Riverside University Health System Program,0.59,0.11,0.47,0.18,0.18,0.71,0.0,0.0,Moreno Valley,CA,Pacific
+Loyola University Medical Center Program,0.56,0.0,0.23,0.1,0.14,0.0,0.0,0.05,Maywood,IL,East North Central
+University of Cincinnati Medical Center/College of Medicine Program,0.54,0.06,0.53,0.19,0.27,0.0,0.03,0.03,Cincinnati,OH,East North Central
+Temple University Hospital Program,0.53,0.02,0.34,0.09,0.17,0.0,0.0,0.0,Philadelphia,PA,Middle Atlantic
+Southern Illinois University School of Medicine Program,0.5,0.06,0.57,0.11,0.19,0.06,0.0,0.03,Springfield,IL,East North Central
+Geisinger Health System Program,0.49,0.11,0.29,0.16,0.18,0.17,0.11,0.19,Danville,PA,Middle Atlantic
+Virginia Commonwealth University Health System Program,0.49,0.01,0.71,0.14,0.21,0.11,0.06,0.0,Richmond,VA,South Atlantic
+Brown University Program,0.45,0.0,1.0,0.13,0.19,0.0,0.0,0.03,Providence,RI,New England

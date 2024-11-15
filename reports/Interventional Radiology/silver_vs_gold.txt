@@ -1,0 +1,18 @@
+Programs with equal Gold and Silver signals: 5
+Programs with Gold signal less than Silver signal: 17
+R-squared value: 0.174
+P-value: 0.000297
+Correlation: 0.417
+
+Programs where Gold Signal < No Signal:
+Count: 3
+Kaiser Permanente Southern California Program: Gold=0.45, No=0.65
+SSM Health/Saint Louis University School of Medicine Program: Gold=0.33, No=0.34
+UCLA David Geffen School of Medicine/UCLA Medical Center Program: Gold=0.03, No=0.08
+
+Programs where Silver Signal < No Signal:
+Count: 4
+Medical College of Georgia Program: Silver=0.2, No=0.22
+Rochester General Hospital Program: Silver=0.2, No=0.25
+University of Mississippi School of Medicine Program: Silver=0.0, No=0.26
+University of South Florida Morsani College of Medicine Program: Silver=0.14, No=0.19

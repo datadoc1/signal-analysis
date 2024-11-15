@@ -1,0 +1,11 @@
+Program,Silver Signal,Gold Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+St Luke's Hospital - Anderson Campus Program,0.49,0.62,0.04,0.54,0.14,0.24,0.02,0.0,0.0,Easton,PA,Middle Atlantic
+University of Iowa Hospitals and Clinics Program,0.48,0.73,0.0,0.5,0.17,0.2,0.05,0.0,0.0,Iowa City,IA,West North Central
+Kaiser Permanente Southern California (Los Angeles) Program,0.34,0.89,0.0,0.2,0.14,0.12,0.24,0.35,0.25,Los Angeles,CA,Pacific
+Marshfield Clinic Program,0.34,0.56,0.0,0.58,0.08,0.11,0.1,0.07,0.0,Marshfield,WI,East North Central
+The MetroHealth System/Case Western Reserve University Program,0.29,0.38,0.0,0.41,0.06,0.1,0.08,0.0,0.0,Cleveland,OH,East North Central
+Southern Illinois University Program,0.26,0.43,0.03,0.22,0.1,0.14,0.04,0.0,0.0,Springfield,IL,East North Central
+Temple University Hospital Program,0.25,0.86,0.0,0.53,0.06,0.12,0.0,0.0,0.0,Philadelphia,PA,Middle Atlantic
+University of Missouri-Columbia Program,0.25,0.67,0.0,0.48,0.08,0.13,0.0,0.0,0.0,Columbia,MO,West North Central
+University of Wisconsin Hospitals and Clinics Program,0.24,0.83,0.0,0.77,0.11,0.15,0.03,0.0,0.0,Madison,WI,East North Central
+Yale-New Haven Medical Center Program,0.24,0.39,0.0,0.56,0.12,0.14,0.0,0.04,0.05,New Haven,CT,New England

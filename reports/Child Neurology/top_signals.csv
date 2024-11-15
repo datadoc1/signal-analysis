@@ -1,0 +1,11 @@
+Program,Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+Indiana University School of Medicine Program,1.0,0.42,1.0,0.44,0.8,0.31,0.06,0.05,Indianapolis,IN,East North Central
+University of California (Irvine) Program,0.88,0.45,0.93,0.41,0.81,0.29,0.06,0.0,Orange,CA,Pacific
+University of Alabama Medical Center Program,0.83,0.37,1.0,0.41,0.83,0.75,0.0,0.0,Birmingham,AL,East South Central
+University of Iowa Hospitals and Clinics Program,0.83,0.29,1.0,0.31,0.78,0.2,0.0,0.13,Iowa City,IA,West North Central
+Yale-New Haven Hospital Program,0.83,0.3,1.0,0.32,0.36,0.33,0.2,0.31,New Haven,CT,New England
+University of North Carolina Hospitals Program,0.82,0.36,1.0,0.38,0.54,0.46,0.0,0.0,Chapel Hill,NC,South Atlantic
+University of Washington Program,0.81,0.29,1.0,0.34,0.51,0.3,0.0,0.0,Seattle,WA,Pacific
+Medical University of South Carolina Program,0.8,0.45,1.0,0.48,0.68,0.56,0.13,0.22,Charleston,SC,South Atlantic
+New York Presbyterian Hospital (Columbia Campus) Program,0.78,0.11,0.47,0.16,0.29,0.14,0.11,0.09,New York,NY,Middle Atlantic
+Duke University Hospital Program,0.75,0.23,1.0,0.28,0.43,0.23,0.0,0.0,Durham,NC,South Atlantic

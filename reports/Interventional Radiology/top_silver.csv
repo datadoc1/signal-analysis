@@ -1,0 +1,11 @@
+Program,Silver Signal,Gold Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+Virginia Commonwealth University Health System Program,1.0,1.0,0.11,1.0,0.18,0.27,0.12,0.0,0.0,Richmond,VA,South Atlantic
+University of Southern California/Los Angeles General Medical Center (USC/LA General) Program,0.88,0.81,0.18,0.5,0.26,0.35,0.28,0.13,0.0,Los Angeles,CA,Pacific
+Henry Ford Health/Henry Ford Hospital Program,0.86,0.69,0.14,0.92,0.15,0.31,0.06,0.13,0.06,Detroit,MI,East North Central
+University of Wisconsin Hospitals and Clinics Program,0.86,0.88,0.13,1.0,0.23,0.3,0.11,0.07,0.17,Madison,WI,East North Central
+University of Kansas School of Medicine Program,0.8,0.88,0.06,0.8,0.11,0.21,0.04,0.0,0.0,Kansas City,KS,West North Central
+Indiana University School of Medicine Program,0.78,1.0,0.14,1.0,0.19,0.28,0.11,0.0,0.0,Indianapolis,IN,East North Central
+UPMC Medical Education Program,0.78,0.67,0.2,0.57,0.2,0.35,0.1,0.04,0.0,Pittsburgh,PA,Middle Atlantic
+Vanderbilt University Medical Center Program,0.73,0.78,0.11,1.0,0.19,0.31,0.0,0.0,0.0,Nashville,TN,East South Central
+Case Western Reserve University/University Hospitals Cleveland Medical Center Program,0.71,0.36,0.06,0.33,0.09,0.12,0.06,0.08,0.04,Cleveland,OH,East North Central
+University of Utah Health Program,0.7,0.73,0.07,1.0,0.17,0.24,0.07,0.06,0.0,Salt Lake City,UT,Mountain

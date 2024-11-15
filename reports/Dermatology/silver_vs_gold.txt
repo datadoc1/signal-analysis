@@ -1,0 +1,11 @@
+Programs with equal Gold and Silver signals: 0
+Programs with Gold signal less than Silver signal: 1
+R-squared value: 0.028
+P-value: 0.100691
+Correlation: 0.168
+
+Programs where Gold Signal < No Signal:
+Count: 0
+
+Programs where Silver Signal < No Signal:
+Count: 0

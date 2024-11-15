@@ -4,5 +4,6 @@ We randomly picked 3 Gold Signal rows and 25 Silver Signal rows from the dataset
 
 This was repeated 10,000 times to calculate the average number of interviews one should expect if they were a completely average applicant with completely randomly selected signals.
 
-Gold Signal Sum (3): 1.1 (95% CI: 0.0-2.12)
-Silver Signal Sum (25): 2.63 (95% CI: 1.81-3.52)
+Gold Signal Sum (3): 1.1 (95% CI: 0.0-2.11)
+Silver Signal Sum (25): 2.63 (95% CI: 1.83-3.52)
+Total Signal Sum (28): 3.73 (95% CI: 2.43-5.05)

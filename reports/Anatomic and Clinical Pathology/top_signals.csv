@@ -1,0 +1,11 @@
+Program,Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+New York Presbyterian Hospital (Cornell Campus) Program,0.83,0.09,0.75,0.13,0.48,0.29,0.03,0.05,New York,NY,Middle Atlantic
+University of Pennsylvania Health System Program,0.75,0.08,0.57,0.14,0.41,0.13,0.05,0.06,Philadelphia,PA,Middle Atlantic
+University of Colorado Program,0.74,0.12,1.0,0.17,0.41,0.25,0.05,0.04,Aurora,CO,Mountain
+University of Tennessee Medical Center at Knoxville Program,0.73,0.03,0.67,0.06,0.25,0.33,0.01,0.0,Knoxville,TN,East South Central
+University of Virginia Medical Center Program,0.73,0.08,0.67,0.11,0.33,0.19,0.03,0.04,Charlottesville,VA,South Atlantic
+University of Utah Health Program,0.71,0.13,1.0,0.18,0.43,0.25,0.02,0.02,Salt Lake City,UT,Mountain
+Vanderbilt University Medical Center Program,0.67,0.14,0.44,0.18,0.46,0.21,0.01,0.01,Nashville,TN,East South Central
+University of California (San Diego) Medical Center Program,0.62,0.02,0.78,0.06,0.24,0.33,0.02,0.02,La Jolla,CA,Pacific
+University of California (San Francisco) Program,0.62,0.08,0.58,0.14,0.47,0.12,0.01,0.04,San Francisco,CA,Pacific
+Summa Health System/NEOMED Program,0.6,0.12,0.6,0.12,0.37,0.44,0.1,0.0,Akron,OH,East North Central

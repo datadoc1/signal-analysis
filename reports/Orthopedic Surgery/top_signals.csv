@@ -1,0 +1,11 @@
+Program,Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+University of Toledo Program,0.55,0.0,0.51,0.15,0.24,0.01,0.0,0.0,Toledo,OH,East North Central
+St Luke's University Hospital Program,0.47,0.01,0.49,0.15,0.24,0.11,0.0,0.0,Bethlehem,PA,Middle Atlantic
+Westchester Medical Center Program,0.45,0.0,0.33,0.14,0.21,0.07,0.0,0.0,Valhalla,NY,Middle Atlantic
+HCA Florida JFK Hospital/University of Miami Miller School of Medicine GME Consortium Program,0.42,0.03,0.41,0.15,0.21,0.07,0.07,0.33,Atlantis,FL,South Atlantic
+McLaren Health Care/Flint/MSU Program,0.4,0.04,0.6,0.12,0.27,0.06,0.0,0.0,Flint,MI,East North Central
+SUNY Upstate Medical University Program,0.39,0.01,0.43,0.1,0.18,0.11,0.0,0.1,Syracuse,NY,Middle Atlantic
+University of Kansas (Wichita) Program,0.38,0.04,0.75,0.12,0.17,0.04,0.05,0.0,Wichita,KS,West North Central
+Medical College of Wisconsin Affiliated Hospitals Program,0.37,0.0,0.2,0.14,0.16,0.03,0.0,0.0,Milwaukee,WI,East North Central
+UMass Chan Medical School Program,0.37,0.02,0.61,0.14,0.18,0.03,0.03,0.0,Worcester,MA,New England
+University of California (San Francisco)/Fresno Program,0.37,0.0,0.3,0.11,0.16,0.09,0.0,0.0,Fresno,CA,Pacific

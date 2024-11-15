@@ -1,0 +1,6 @@
+Program,Silver Signal,Gold Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+Indiana University School of Medicine Program,0.78,1.0,0.14,1.0,0.19,0.28,0.11,0.0,0.0,Indianapolis,IN,East North Central
+Strong Memorial Hospital of the University of Rochester Program,0.57,1.0,0.33,0.5,0.36,0.5,0.36,0.0,0.0,Rochester,NY,Middle Atlantic
+University of Mississippi School of Medicine Program,0.0,1.0,0.26,1.0,0.24,0.4,0.18,0.06,0.08,Jackson,MS,East South Central
+Virginia Commonwealth University Health System Program,1.0,1.0,0.11,1.0,0.18,0.27,0.12,0.0,0.0,Richmond,VA,South Atlantic
+University of North Carolina Hospitals Program,0.63,0.95,0.06,0.83,0.17,0.23,0.05,0.16,0.12,Chapel Hill,NC,South Atlantic
