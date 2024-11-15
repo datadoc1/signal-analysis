@@ -1,0 +1,11 @@
+Program,Silver Signal,Gold Signal,No Signal,In-State School,Out-Of-State School,MD,DO,US IMG,Non US IMG,City,State,Region
+University of Vermont Medical Center Program,0.85,0.97,0.02,1.0,0.1,0.13,0.1,0.05,0.02,Burlington,VT,New England
+Medical University of South Carolina Program,0.81,0.8,0.05,0.71,0.19,0.24,0.17,0.04,0.02,Charleston,SC,South Atlantic
+UMass Chan Medical School Program,0.79,0.78,0.05,0.48,0.11,0.13,0.1,0.1,0.1,Worcester,MA,New England
+Virginia Commonwealth University Health System Program,0.73,0.72,0.04,0.43,0.09,0.12,0.09,0.04,0.04,Richmond,VA,South Atlantic
+Loma Linda University Health Education Consortium Program,0.72,0.8,0.08,0.62,0.13,0.27,0.06,0.02,0.02,Loma Linda,CA,Pacific
+University of Rochester Program,0.72,0.68,0.13,0.41,0.14,0.23,0.13,0.06,0.04,Rochester,NY,Middle Atlantic
+Kaiser Permanente Southern California (Los Angeles) Program,0.71,0.5,0.06,0.28,0.09,0.16,0.02,0.04,0.0,Pasadena,CA,Pacific
+UPMC Medical Education Program,0.7,0.64,0.06,0.37,0.12,0.2,0.07,0.03,0.02,Pittsburgh,PA,Middle Atlantic
+University of Kentucky College of Medicine Program,0.69,0.72,0.02,0.95,0.1,0.14,0.14,0.05,0.08,Lexington,KY,East South Central
+University of Missouri-Kansas City School of Medicine Program,0.69,0.63,0.04,0.45,0.08,0.14,0.09,0.0,0.01,Kansas City,MO,West North Central

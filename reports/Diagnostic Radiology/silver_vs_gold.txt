@@ -1,0 +1,17 @@
+Programs with equal Gold and Silver signals: 4
+Programs with Gold signal less than Silver signal: 29
+R-squared value: 0.291
+P-value: 0.000000
+Correlation: 0.539
+
+Programs where Gold Signal < No Signal:
+Count: 3
+Arrowhead Regional Medical Center Program: Gold=0.04, No=0.14
+Harlem Hospital Center Program: Gold=0.05, No=0.12
+Quinnipiac University Frank H. Netter MD School of Medicine/St VIncent's Medical Center Program: Gold=0.08, No=0.12
+
+Programs where Silver Signal < No Signal:
+Count: 3
+Harlem Hospital Center Program: Silver=0.09, No=0.12
+Norwalk Hospital Program: Silver=0.13, No=0.14
+Quinnipiac University Frank H. Netter MD School of Medicine/St VIncent's Medical Center Program: Silver=0.11, No=0.12

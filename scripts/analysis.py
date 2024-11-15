@@ -2,6 +2,12 @@ import random
 import itertools
 import pandas as pd
 import os
+import plotly.graph_objects as go
+import plotly.io as pio
+import numpy as np
+from scipy import stats
+import geopandas as gpd
+import matplotlib.pyplot as plt
 
 def simulation_tiered(df, gold_count, silver_count):
     # Set the random seed
@@ -10,6 +16,7 @@ def simulation_tiered(df, gold_count, silver_count):
     # Initialize lists to store the sums
     gold_signal_sums = []
     silver_signal_sums = []
+    total_signal_sums = []
 
     # Run the simulation 10000 times
     for _ in range(10000):
@@ -27,13 +34,16 @@ def simulation_tiered(df, gold_count, silver_count):
         # Calculate the sum of Silver Signal for the remaining rows
         silver_signal_sum = subset.loc[~subset.index.isin(random_rows.index), 'Silver Signal'].sum()
 
+        total_signal_sum = gold_signal_sum + silver_signal_sum
         # Append the sums to the lists
         gold_signal_sums.append(gold_signal_sum)
         silver_signal_sums.append(silver_signal_sum)
+        total_signal_sums.append(total_signal_sum)
 
     # Calculate the mean of the gold_signal_sums and silver_signal_sums
     mean_gold_signal_sum = sum(gold_signal_sums) / len(gold_signal_sums)
     mean_silver_signal_sum = sum(silver_signal_sums) / len(silver_signal_sums)
+    mean_total_signal_sum = sum(total_signal_sums) / len(total_signal_sums)
 
     # Calculate the 95% confidence interval for the gold_signal_sums
     gold_signal_sums.sort()
@@ -45,14 +55,22 @@ def simulation_tiered(df, gold_count, silver_count):
     lower_bound_silver = silver_signal_sums[249]
     upper_bound_silver = silver_signal_sums[9749]
 
+    # Calculate the 95% confidence interval for the total_signal_sums
+    total_signal_sums.sort()
+    lower_bound_total = total_signal_sums[249]
+    upper_bound_total = total_signal_sums[9749]
+
     # Save the results
     # Round the results to 2 decimal places
     mean_gold_signal_sum = round(mean_gold_signal_sum, 2)
     mean_silver_signal_sum = round(mean_silver_signal_sum, 2)
+    mean_total_signal_sum = round(mean_total_signal_sum, 2)
     lower_bound_gold = round(lower_bound_gold, 2)
     upper_bound_gold = round(upper_bound_gold, 2)
     lower_bound_silver = round(lower_bound_silver, 2)
     upper_bound_silver = round(upper_bound_silver, 2)
+    lower_bound_total = round(lower_bound_total, 2)
+    upper_bound_total = round(upper_bound_total, 2)
 
     # Prepare the results string
     results = (
@@ -62,6 +80,7 @@ def simulation_tiered(df, gold_count, silver_count):
         f'This was repeated 10,000 times to calculate the average number of interviews one should expect if they were a completely average applicant with completely randomly selected signals.\n\n'
         f'Gold Signal Sum ({gold_count}): {mean_gold_signal_sum} (95% CI: {lower_bound_gold}-{upper_bound_gold})\n'
         f'Silver Signal Sum ({silver_count}): {mean_silver_signal_sum} (95% CI: {lower_bound_silver}-{upper_bound_silver})\n'
+        f'Total Signal Sum ({gold_count + silver_count}): {mean_total_signal_sum} (95% CI: {lower_bound_total}-{upper_bound_total})\n'
     )
 
     # Print the results
@@ -207,6 +226,34 @@ def geographic_bias(df):
     
     return grouped
 
+def top_signals(df, column_name, count):
+    return df.nlargest(count, column_name)
+
+def generate_stacked_boxplot(df, column_names, output_file='stacked_boxplot.png'):
+    fig = go.Figure()
+
+    for column in column_names:
+        fig.add_trace(go.Box(
+            x=df[column],  # Changed from y to x
+            name=column,
+            boxpoints=False,  # Remove individual points
+            whiskerwidth=0.2,
+            line_width=1
+        ))
+
+    fig.update_layout(
+        xaxis=dict(
+            title='Interview Rate',
+            zeroline=False
+        ),
+        boxmode='group'
+    )
+
+    # Save the plot as an image file
+    pio.write_image(fig, output_file)
+    return
+
+
 # Read the specialties file
 specialties = pd.read_csv('signal_2024_match.csv')
 
@@ -228,11 +275,98 @@ for index, row in specialties_tiered.iterrows():
     output_folder = f'reports/{value}'
     os.makedirs(output_folder, exist_ok=True)
     
+    # Generate a stacked boxplot for the numeric fields
+    generate_stacked_boxplot(df, numeric_fields, os.path.join(output_folder, 'stacked_boxplot.png'))
+
+    # Save silver vs gold comparison stats
+    with open(os.path.join(output_folder, 'silver_vs_gold.txt'), 'w') as file:
+        # Count programs with equal signals
+        equal_signals = len(df[df['Gold Signal'] == df['Silver Signal']])
+        
+        # Count programs where gold < silver
+        gold_lower = len(df[df['Gold Signal'] < df['Silver Signal']])
+        
+        # Calculate correlation and p-value
+        clean_data = df[['Gold Signal', 'Silver Signal']].dropna()
+        correlation_matrix = np.corrcoef(clean_data['Gold Signal'], clean_data['Silver Signal'])
+        r_squared = correlation_matrix[0,1]**2
+        
+        correlation, p_value = stats.pearsonr(clean_data['Gold Signal'], clean_data['Silver Signal'])
+        
+        # Write results
+        file.write(f"Programs with equal Gold and Silver signals: {equal_signals}\n")
+        file.write(f"Programs with Gold signal less than Silver signal: {gold_lower}\n")
+        file.write(f"R-squared value: {r_squared:.3f}\n")
+        file.write(f"P-value: {p_value:.6f}\n")
+        file.write(f"Correlation: {correlation:.3f}\n")
+        # Count and list programs where Gold or Silver signal is less than No Signal
+        gold_below_no = df[df['Gold Signal'] < df['No Signal']]
+        silver_below_no = df[df['Silver Signal'] < df['No Signal']]
+        
+        file.write("\nPrograms where Gold Signal < No Signal:\n")
+        file.write(f"Count: {len(gold_below_no)}\n")
+        for _, row in gold_below_no.iterrows():
+            file.write(f"{row['Program']}: Gold={row['Gold Signal']}, No={row['No Signal']}\n")
+        
+        file.write("\nPrograms where Silver Signal < No Signal:\n")
+        file.write(f"Count: {len(silver_below_no)}\n")
+        for _, row in silver_below_no.iterrows():
+            file.write(f"{row['Program']}: Silver={row['Silver Signal']}, No={row['No Signal']}\n")
+    
+    # Generate a scatterplot for Gold Signal and Silver Signal
+    scatterplot = go.Figure()
+    scatterplot.add_trace(go.Scatter
+    (
+        x=df['Gold Signal'],
+        y=df['Silver Signal'],
+        mode='markers',
+        marker=dict(
+            size=10,
+            color='blue',
+            opacity=0.5
+        )
+    ))
+
+    scatterplot.update_layout(
+        xaxis_title='Gold Signal',
+        yaxis_title='Silver Signal', 
+        title='Gold Signal vs Silver Signal'
+    )
+
+    # Calculate R-squared
+    # Remove non-numeric values and get clean data
+    clean_data = df[['Gold Signal', 'Silver Signal']].dropna()
+    clean_data = clean_data[clean_data['Gold Signal'].apply(lambda x: isinstance(x, (int, float)))]
+    clean_data = clean_data[clean_data['Silver Signal'].apply(lambda x: isinstance(x, (int, float)))]
+    
+    # Calculate coefficients and r-squared only on clean data
+    coefficients = np.polyfit(clean_data['Gold Signal'], clean_data['Silver Signal'], 1)
+    polynomial = np.poly1d(coefficients)
+    r_squared = np.corrcoef(clean_data['Gold Signal'], clean_data['Silver Signal'])[0,1]**2
+
+    # Add trendline
+    x_range = np.linspace(df['Gold Signal'].min(), df['Gold Signal'].max(), 100)
+    scatterplot.add_trace(go.Scatter(
+        x=x_range,
+        y=polynomial(x_range),
+        mode='lines',
+        name=f'Trendline (R² = {r_squared:.3f})',
+        line=dict(color='red', dash='dash')
+    ))
+
+    # Save the scatterplot
+    scatterplot.write_image(os.path.join(output_folder, 'signal_scatter.png'))
+
     # Generate descriptive statistics for the numeric fields
     descriptive_stats = df[numeric_fields].describe()
     print(descriptive_stats)
     # Save descriptive statistics to a CSV file in the output folder
     descriptive_stats.to_csv(os.path.join(output_folder, 'descriptive_stats.csv'))
+
+    top_gold_df = top_signals(df, 'Gold Signal', 5)
+    top_silver_df = top_signals(df, 'Silver Signal', 10)
+    top_gold_df.to_csv(os.path.join(output_folder, 'top_gold.csv'), index=False)
+    top_silver_df.to_csv(os.path.join(output_folder, 'top_silver.csv'), index=False)
     
     # Retrieve the values from columns 4 and 5 (gold_count and silver_count)
     gold_count = int(row.iloc[3])  # Column 4: Gold Count
@@ -248,6 +382,70 @@ for index, row in specialties_tiered.iterrows():
     
     geographic_bias_df = geographic_bias(df)
     geographic_bias_df.to_csv(os.path.join(output_folder, 'geographic_bias.csv'), index=False)
+
+    ## Generate Heatmaps
+    # Load the shapefile
+    shapefile_path = 'shapefiles/cb_2021_us_state_20m.shp'
+    gdf = gpd.read_file(shapefile_path)
+
+    # Merge the geographic_bias_df with the shapefile GeoDataFrame
+    merged = gdf.set_index('STUSPS').join(geographic_bias_df.set_index('State'))
+
+    # Fill NaN values with 0
+    merged['Mean Difference'] = merged['Mean Difference'].fillna(0)
+    merged['Sum Difference'] = merged['Sum Difference'].fillna(0)
+
+    # Create a function to plot the map with insets
+    def plot_with_insets(data, column, title, output_path):
+        fig = plt.figure(figsize=(15, 10))
+        
+        # Main map
+        ax = fig.add_axes([0, 0, 1, 1])
+        continental = data[~data.index.isin(['AK', 'HI', 'PR'])]
+        continental.plot(column=column, cmap='Blues', linewidth=0.8, 
+                        edgecolor='0.8', legend=True, ax=ax)
+        
+        # Alaska inset - made larger
+        ax_ak = fig.add_axes([0.02, 0.02, 0.3, 0.3])
+        alaska = data[data.index == 'AK']
+        alaska.plot(column=column, cmap='Blues', linewidth=0.8, 
+                   edgecolor='0.8', ax=ax_ak)
+        ax_ak.set_title('Alaska')
+        ax_ak.axis('off')
+        
+        # Hawaii inset
+        ax_hi = fig.add_axes([0.35, 0.05, 0.2, 0.2])
+        hawaii = data[data.index == 'HI']
+        hawaii.plot(column=column, cmap='Blues', linewidth=0.8, 
+                   edgecolor='0.8', ax=ax_hi)
+        ax_hi.set_title('Hawaii')
+        ax_hi.axis('off')
+
+        # Puerto Rico inset
+        ax_pr = fig.add_axes([0.60, 0.05, 0.2, 0.2])
+        puerto_rico = data[data.index == 'PR']
+        puerto_rico.plot(column=column, cmap='Blues', linewidth=0.8,
+                        edgecolor='0.8', ax=ax_pr)
+        ax_pr.set_title('Puerto Rico')
+        ax_pr.axis('off')
+        
+        # Main map settings
+        ax.set_title(title, fontdict={'fontsize': '15', 'fontweight': '3'})
+        ax.axis('off')
+        
+        plt.savefig(output_path, dpi=300, bbox_inches='tight')
+        plt.close()
+
+    # Plot both maps
+    plot_with_insets(merged, 'Mean Difference',
+                     'Geographic Bias Heatmap: Average Increase in Interview Odds for Attending an In-State Medical School',
+                     os.path.join(output_folder, 'geographic_bias_heatmap_average.png'))
+    
+    plot_with_insets(merged, 'Sum Difference',
+                     'Geographic Bias Heatmap: Total Increase in Expected Interviews for Attending an In-State Medical School',
+                     os.path.join(output_folder, 'geographic_bias_heatmap_total.png'))
+    
+    
 
 for index, row in specialties_not_tiered.iterrows():
     value = row["Specialty"]
@@ -271,6 +469,8 @@ for index, row in specialties_not_tiered.iterrows():
     print(descriptive_stats)
     # Save descriptive statistics to a CSV file in the output folder
     descriptive_stats.to_csv(os.path.join(output_folder, 'descriptive_stats.csv'))
+    top_signals_df = top_signals(df, 'Signal', 10)
+    top_signals_df.to_csv(os.path.join(output_folder, 'top_signals.csv'), index=False)
     
     if 'Signal' in df.columns:
         # Retrieve the values from column 3 (signal_count)
