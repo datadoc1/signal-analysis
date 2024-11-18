@@ -260,7 +260,7 @@ specialties = pd.read_csv('signal_2024_match.csv')
 # Filter specialties that are tiered
 specialties_tiered = specialties[specialties['Tiered'] == 'Yes']
 specialties_not_tiered = specialties[specialties['Tiered'] == 'No']
-'''
+
 # Iterate over the tiered specialties
 for index, row in specialties_tiered.iterrows():
     value = row["Specialty"]
@@ -409,13 +409,14 @@ for index, row in specialties_tiered.iterrows():
         ax = fig.add_axes([0, 0, 1, 1])
         continental = data[~data.index.isin(['AK', 'HI', 'PR'])]
 
-        # Create a custom colormap with gray for NaN values
+        # Create a custom colormap with striped pattern for NaN values
         cmap = plt.cm.Blues
-        cmap.set_bad(color='gray')
+        cmap.set_bad('lightgray', alpha=0.5)  # Lighter gray for missing data
         
+        # Plot the map
         continental.plot(column=column, cmap=cmap, linewidth=0.8, 
                         edgecolor='0.8', legend=True, ax=ax,
-                        missing_kwds={'color': 'gray', 'label': 'No Data'})
+                        missing_kwds={'color': 'lightgray', 'hatch': '///', 'label': 'No Data'})
         
         # Main map settings
         ax.set_title(title, fontdict={'fontsize': '15', 'fontweight': '3'})
@@ -432,8 +433,7 @@ for index, row in specialties_tiered.iterrows():
     plot_map(merged, 'Sum Difference',
              'Geographic Bias Heatmap: Total Increase in Expected Interviews for Attending an In-State Medical School',
              os.path.join(output_folder, 'geographic_bias_heatmap_total.png'))
-'''    
-
+ 
 for index, row in specialties_not_tiered.iterrows():
     value = row["Specialty"]
     output_folder = f'reports/{value}'
@@ -548,13 +548,14 @@ for index, row in specialties_not_tiered.iterrows():
         ax = fig.add_axes([0, 0, 1, 1])
         continental = data[~data.index.isin(['AK', 'HI', 'PR'])]
 
-        # Create a custom colormap with gray for NaN values
+        # Create a custom colormap with striped pattern for NaN values
         cmap = plt.cm.Blues
-        cmap.set_bad(color='gray')
+        cmap.set_bad('lightgray', alpha=0.5)  # Lighter gray for missing data
         
+        # Plot the map
         continental.plot(column=column, cmap=cmap, linewidth=0.8, 
                         edgecolor='0.8', legend=True, ax=ax,
-                        missing_kwds={'color': 'gray', 'label': 'No Data'})
+                        missing_kwds={'color': 'lightgray', 'hatch': '///', 'label': 'No Data'})
         
         # Main map settings
         ax.set_title(title, fontdict={'fontsize': '15', 'fontweight': '3'})
