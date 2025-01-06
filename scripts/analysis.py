@@ -9,6 +9,7 @@ from scipy import stats
 import geopandas as gpd
 import matplotlib.pyplot as plt
 import re
+from matplotlib.patches import Patch
 
 def simulation_tiered(df, gold_count, silver_count):
     # Set the random seed
@@ -247,7 +248,8 @@ def generate_stacked_boxplot(df, column_names, output_file='stacked_boxplot.png'
             title='Interview Rate',
             zeroline=False
         ),
-        boxmode='group'
+        boxmode='group',
+        showlegend=False  # Remove the legend
     )
 
     # Save the plot as an image file
@@ -330,13 +332,15 @@ for index, row in specialties_tiered.iterrows():
             size=10,
             color='blue',
             opacity=0.5
-        )
+        ),
+        showlegend=False
     ))
 
     scatterplot.update_layout(
-        xaxis_title='Gold Signal',
-        yaxis_title='Silver Signal', 
-        title='Gold Signal vs Silver Signal'
+        xaxis_title='Gold Signal Interview Rate',
+        yaxis_title='Silver Signal Interview Rate',
+        showlegend=False,
+        xaxis=dict(range=[0, None])  # Set minimum x-axis value to 0
     )
 
     # Calculate R-squared
@@ -354,17 +358,9 @@ for index, row in specialties_tiered.iterrows():
     scatterplot.update_traces(x=df['Silver Signal'], y=df['Gold Signal'])
     scatterplot.update_layout(
         xaxis_title='Silver Signal',
-        yaxis_title='Gold Signal'
+        yaxis_title='Gold Signal',
+        xaxis=dict(range=[0, None])  # Set minimum x-axis value to 0
     )
-
-    # Add diagonal line
-    scatterplot.add_trace(go.Scatter(
-        x=diagonal,
-        y=diagonal,
-        mode='lines',
-        name='Equal Signals',
-        line=dict(color='red', dash='dash')
-    ))
 
     # Save the scatterplot
     scatterplot.write_image(os.path.join(output_folder, 'signal_scatter.png'))
@@ -402,7 +398,7 @@ for index, row in specialties_tiered.iterrows():
     merged = gdf.set_index('STUSPS').join(geographic_bias_df.set_index('State'))
 
     # Create a function to plot the map 
-    def plot_map(data, column, title, output_path):
+    def plot_map(data, column, output_path):
         fig = plt.figure(figsize=(15, 10))
         
         # Main map
@@ -414,12 +410,28 @@ for index, row in specialties_tiered.iterrows():
         cmap.set_bad('lightgray', alpha=0.5)  # Lighter gray for missing data
         
         # Plot the map
-        continental.plot(column=column, cmap=cmap, linewidth=0.8, 
-                        edgecolor='0.8', legend=True, ax=ax,
-                        missing_kwds={'color': 'lightgray', 'hatch': '///', 'label': 'No Data'})
+        continental.plot(
+            column=column,
+            cmap=cmap,
+            linewidth=0.8,
+            edgecolor='0.8',
+            legend=True,
+            ax=ax,
+            missing_kwds={'color': 'lightgray'},
+            legend_kwds={'shrink': 0.6}
+        )
+        
+        # Get current handles and labels from the axes
+        handles, labels = ax.get_legend_handles_labels()
+        
+        # Append new handle and label for 'No Data'
+        handles.append(Patch(facecolor='lightgray', label='No Data'))
+        labels.append('No Data')
+        
+        # Create the legend
+        ax.legend(handles=handles, labels=labels, loc='right', frameon=True, bbox_to_anchor=(0.98, 0.5))
         
         # Main map settings
-        ax.set_title(title, fontdict={'fontsize': '15', 'fontweight': '3'})
         ax.axis('off')
         
         plt.savefig(output_path, dpi=300, bbox_inches='tight')
@@ -427,11 +439,9 @@ for index, row in specialties_tiered.iterrows():
 
     # Plot both maps
     plot_map(merged, 'Mean Difference',
-             'Geographic Bias Heatmap: Average Increase in Interview Odds for Attending an In-State Medical School',
              os.path.join(output_folder, 'geographic_bias_heatmap_average.png'))
     
     plot_map(merged, 'Sum Difference',
-             'Geographic Bias Heatmap: Total Increase in Expected Interviews for Attending an In-State Medical School',
              os.path.join(output_folder, 'geographic_bias_heatmap_total.png'))
  
 for index, row in specialties_not_tiered.iterrows():
@@ -541,7 +551,7 @@ for index, row in specialties_not_tiered.iterrows():
     merged = gdf.set_index('STUSPS').join(geographic_bias_df.set_index('State'))
 
     # Create a function to plot the map 
-    def plot_map(data, column, title, output_path):
+    def plot_map(data, column, output_path):
         fig = plt.figure(figsize=(15, 10))
         
         # Main map
@@ -553,12 +563,28 @@ for index, row in specialties_not_tiered.iterrows():
         cmap.set_bad('lightgray', alpha=0.5)  # Lighter gray for missing data
         
         # Plot the map
-        continental.plot(column=column, cmap=cmap, linewidth=0.8, 
-                        edgecolor='0.8', legend=True, ax=ax,
-                        missing_kwds={'color': 'lightgray', 'hatch': '///', 'label': 'No Data'})
+        continental.plot(
+            column=column,
+            cmap=cmap,
+            linewidth=0.8,
+            edgecolor='0.8',
+            legend=True,
+            ax=ax,
+            missing_kwds={'color': 'lightgray'},
+            legend_kwds={'shrink': 0.6}
+        )
+        
+        # Get current handles and labels from the axes
+        handles, labels = ax.get_legend_handles_labels()
+        
+        # Append new handle and label for 'No Data'
+        handles.append(Patch(facecolor='lightgray', label='No Data'))
+        labels.append('No Data')
+        
+        # Create the legend
+        ax.legend(handles=handles, labels=labels, loc='right', frameon=True, bbox_to_anchor=(0.98, 0.5))
         
         # Main map settings
-        ax.set_title(title, fontdict={'fontsize': '15', 'fontweight': '3'})
         ax.axis('off')
         
         plt.savefig(output_path, dpi=300, bbox_inches='tight')
@@ -566,12 +592,7 @@ for index, row in specialties_not_tiered.iterrows():
 
     # Plot both maps
     plot_map(merged, 'Mean Difference',
-             'Geographic Bias Heatmap: Average Increase in Interview Odds for Attending an In-State Medical School',
              os.path.join(output_folder, 'geographic_bias_heatmap_average.png'))
     
     plot_map(merged, 'Sum Difference',
-             'Geographic Bias Heatmap: Total Increase in Expected Interviews for Attending an In-State Medical School',
              os.path.join(output_folder, 'geographic_bias_heatmap_total.png'))
-
-
-
